@@ -1,2 +1,2 @@
 export BackToTop from './BackToTop'
-export default Jump from './Jump'
+export default from './Jump'
