@@ -44,8 +44,6 @@ export default {
   position: fixed;
   right: 100px;
   bottom: 50px;
-  height: 40px;
-  width: 40px;
   cursor: pointer;
 }
 </style>
