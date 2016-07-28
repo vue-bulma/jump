@@ -1,5 +1,8 @@
-export { util } from 'vue'
+import { util } from 'vue'
 
+export var on = util.on
+
+export var off = util.off
 
 export function getScroll(w, top) {
   let ret = w[`page${top ? 'Y' : 'X'}Offset`]

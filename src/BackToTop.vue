@@ -6,7 +6,7 @@
 
 <script>
 import jump from 'jump.js'
-import { on, getScroll } from './util'
+import { on, off, getScroll } from './util'
 
 export default {
   props: {
@@ -24,6 +24,10 @@ export default {
   ready () {
     this.handleScroll()
     on(window, 'scroll', this.handleScroll)
+  },
+
+  beforeDestroy () {
+    off(window, 'scroll', this.handleScroll)
   },
 
   methods: {
