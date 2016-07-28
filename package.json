@@ -1,6 +1,6 @@
 {
   "name": "vue-bulma-jump",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Jump component is based on jump.js for Vue Bulma",
   "main": "src/index.js",
   "peerDependencies": {
