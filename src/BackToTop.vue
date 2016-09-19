@@ -21,7 +21,7 @@ export default {
     }
   },
 
-  ready () {
+  mounted () {
     this.handleScroll()
     on(window, 'scroll', this.handleScroll)
   },

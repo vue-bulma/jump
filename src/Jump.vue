@@ -15,11 +15,11 @@ export default {
     }
   },
 
-  compiled () {
+  created () {
     this.$el = this.$el.nextSibling
   },
 
-  ready () {
+  mounted () {
     on(this.$el, 'click', this.handler)
   },
 
