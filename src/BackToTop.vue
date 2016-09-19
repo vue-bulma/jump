@@ -1,16 +1,15 @@
 <template>
-  <div class="back-to-top" @click="scrollToTop" v-show="visible">
+  <div class="jump back-to-top" @click="scrollToTop" v-show="visible">
     <slot></slot>
   </div>
 </template>
 
 <script>
 import jump from 'jump.js'
-import { on, off, getScroll } from './util'
+import { getScroll } from './util'
 
 export default {
   props: {
-    visible: Boolean,
     visibilityHeight: {
       type: Number,
       default: 400
@@ -21,13 +20,19 @@ export default {
     }
   },
 
+  data () {
+    return {
+      visible: false
+    }
+  },
+
   mounted () {
     this.handleScroll()
-    on(window, 'scroll', this.handleScroll)
+    window.addEventListener('scroll', this.handleScroll)
   },
 
   beforeDestroy () {
-    off(window, 'scroll', this.handleScroll)
+    window.removeEventListener('scroll', this.handleScroll)
   },
 
   methods: {

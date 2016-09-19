@@ -1,10 +1,11 @@
 <template>
-  <slot></slot>
+  <div class="jump">
+    <slot></slot>
+  </div>
 </template>
 
 <script>
 import jump from 'jump.js'
-import { on } from './util'
 
 export default {
   props: {
@@ -20,7 +21,7 @@ export default {
   },
 
   mounted () {
-    on(this.$el, 'click', this.handler)
+    this.$el.addEventListener('click', this.handler)
   },
 
   methods: {
